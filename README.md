@@ -5,4 +5,4 @@ A simple logger for Deno
 
 # Contributing
 
-If you have any contributions, feel free to make a PR, currently the main thing missing is automated tests, which should be roughly laid out in #1, feel free to make comments on that issue if you have any question, all I ask is that you do not run any formatters on the code beforehand, as I am happy with the current styling
+If you have any contributions, feel free to make a PR, currently the main thing missing is automated tests, which should be roughly laid out in [#1](https://github.com/grian32/glogger/issues/1), feel free to make comments on that issue if you have any question, all I ask is that you do not run any formatters on the code beforehand, as I am happy with the current styling
