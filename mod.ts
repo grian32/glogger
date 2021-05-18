@@ -3,20 +3,19 @@ import { brightBlue, cyan, format, green, brightCyan, yellow, red } from "./deps
 export default class GLogger {
 
     info(message: string): string | void {
-        // returns string or void to allow for easier testing, tests will patch console.log to return the input.
-        return console.log(`${cyan(("[" + format(new Date(), "yyyy/MM/dd h:mm:ss a") + "]"))} ${brightBlue(("[" + this.getDefinitionPath() + "]"))} ${green("[INFO]")} ${message}`);
+        console.log(`${cyan(("[" + format(new Date(), "yyyy/MM/dd h:mm:ss a") + "]"))} ${brightBlue(("[" + this.getDefinitionPath() + "]"))} ${green("[INFO]")} ${message}`);
     }
 
     debug(message: string): string | void {
-        return console.log(`${cyan(("[" + format(new Date(), "yyyy/MM/dd h:mm:ss a") + "]"))} ${brightBlue(("[" + this.getDefinitionPath() + "]"))} ${brightCyan("[DEBUG]")} ${message}`);
+        console.log(`${cyan(("[" + format(new Date(), "yyyy/MM/dd h:mm:ss a") + "]"))} ${brightBlue(("[" + this.getDefinitionPath() + "]"))} ${brightCyan("[DEBUG]")} ${message}`);
     }
 
     warn(message: string): string | void {
-        return console.log(`${cyan(("[" + format(new Date(), "yyyy/MM/dd h:mm:ss a") + "]"))} ${brightBlue(("[" + this.getDefinitionPath() + "]"))} ${yellow("[WARN]")} ${message}`);
+        console.log(`${cyan(("[" + format(new Date(), "yyyy/MM/dd h:mm:ss a") + "]"))} ${brightBlue(("[" + this.getDefinitionPath() + "]"))} ${yellow("[WARN]")} ${message}`);
     }
 
     error(message: string): string | void {
-        return console.log(`${cyan(("[" + format(new Date(), "yyyy/MM/dd h:mm:ss a") + "]"))} ${brightBlue(("[" + this.getDefinitionPath() + "]"))} ${red("[ERROR]")} ${message}`);
+        console.log(`${cyan(("[" + format(new Date(), "yyyy/MM/dd h:mm:ss a") + "]"))} ${brightBlue(("[" + this.getDefinitionPath() + "]"))} ${red("[ERROR]")} ${message}`);
     }
 
     getDefinitionPath(): string | undefined {
