@@ -18,7 +18,7 @@ export default class GLogger {
         console.log(`${cyan(("[" + format(new Date(), "yyyy/MM/dd h:mm:ss a") + "]"))} ${brightBlue(("[" + this.getDefinitionPath() + "]"))} ${red("[ERROR]")} ${message}`);
     }
 
-    getDefinitionPath(): string | undefined {
+    private getDefinitionPath(): string | undefined {
         // ass regex, wont attempt to explain
         let stack = (new Error()).stack;
         let matchArr = stack?.match(/.+at.+ \(/gi)
