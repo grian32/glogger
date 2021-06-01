@@ -1,13 +1,10 @@
-
-name: upgrader
+name: updateDeps
 on:
   schedule:
     - cron: '0 0 * * *'
   push:
-  pull_request:
-
+  
 jobs:
-
   update-dependencies:
     runs-on: ubuntu-latest
     steps:
