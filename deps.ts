@@ -10,3 +10,7 @@ export {
 export {
     format
 } from "https://deno.land/std@0.97.0/datetime/mod.ts";
+
+export { 
+    assert
+} from "https://deno.land/std@0.97.0/testing/asserts.ts";
