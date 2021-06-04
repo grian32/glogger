@@ -1,3 +1,4 @@
+// TODO: change to deps.ts
 import { brightBlue, brightCyan, cyan, green, yellow, red } from "https://deno.land/std@0.97.0/fmt/colors.ts";
 import { assert, assertEquals } from "https://deno.land/std@0.97.0/testing/asserts.ts";
 
@@ -14,5 +15,5 @@ Deno.test("logger.info()", async () => {
     const stdout = decoder.decode(await p.output());
     p.close();
     assertEquals("dn", stdout)
-    //console.log(stdout.match(/\\x1b\[36m\[\d+\/\d+\/\d+ \d+:\d+:\d+ (?:PM|AM)]\\x1b\[39m \\x1b\[94m\[(?:(?:.+\.ts|.+\.js)|(?:.+(?:\.ts|\.js)@.+(?:\/.+)+)|(?:.+(?:\.ts|\.js)@.+))]\\x1b\[39m \\x1b\[32m\[INFO]\\x1b\[39m .+\\n/gm));
+    // TODO: regex
 })
