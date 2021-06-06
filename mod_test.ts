@@ -13,6 +13,7 @@ Deno.test("logger.info()", async () => {
     });
     const stdout = decoder.decode(await p.output());
     p.close();
+    console.log(stdout);
     assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[INFO\] .+\n/gm.test(stdout));
 })
 
@@ -26,6 +27,7 @@ Deno.test("logger.error()", async () => {
     });
     const stdout = decoder.decode(await p.output());
     p.close();
+    console.log(stdout);
     assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[ERROR\] .+\n/gm.test(stdout));
 })
 
@@ -39,6 +41,7 @@ Deno.test("logger.debug()", async () => {
     });
     const stdout = decoder.decode(await p.output());
     p.close();
+    console.log(stdout);
     assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[DEBUG\] .+\n/gm.test(stdout));
 })
 
@@ -52,5 +55,6 @@ Deno.test("logger.warn()", async () => {
     });
     const stdout = decoder.decode(await p.output());
     p.close();
+    console.log(stdout);
     assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[WARN\] .+\n/gm.test(stdout));
 })
