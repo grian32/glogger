@@ -7,12 +7,9 @@ Deno.test("logger.info()", async () => {
     const p = Deno.run({
         cmd: ["deno", "run", "./testfiles/info.ts"],
         stdout: "piped",
-        stderr: "piped",
     });
     const stdout = decoder.decode(await p.output());
-    const stderr = decoder.decode(await p.stderrOutput())
     p.close();
-    console.log(stderr)
     assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[INFO\] .+\n/gm.test(stdout));
 })
 
@@ -20,12 +17,9 @@ Deno.test("logger.error()", async () => {
     const p = Deno.run({
         cmd: ["deno", "run", "./testfiles/error.ts"],
         stdout: "piped",
-        stderr: "piped",
     });
     const stdout = decoder.decode(await p.output());
-    const stderr = decoder.decode(await p.stderrOutput())
     p.close();
-    console.log(stderr)
     assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[ERROR\] .+\n/gm.test(stdout));
 })
 
@@ -33,12 +27,9 @@ Deno.test("logger.debug()", async () => {
     const p = Deno.run({
         cmd: ["deno", "run", "./testfiles/debug.ts"],
         stdout: "piped",
-        stderr: "piped",
     });
     const stdout = decoder.decode(await p.output());
-    const stderr = decoder.decode(await p.stderrOutput())
     p.close();
-    console.log(stderr)
     assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[DEBUG\] .+\n/gm.test(stdout));
 })
 
@@ -49,8 +40,6 @@ Deno.test("logger.warn()", async () => {
         stderr: "piped",
     });
     const stdout = decoder.decode(await p.output());
-    const stderr = decoder.decode(await p.stderrOutput())
     p.close();
-    console.log(stderr)
     assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[WARN\] .+\n/gm.test(stdout));
 })
