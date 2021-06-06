@@ -19,6 +19,6 @@ jobs:
         uses: denolib/setup-deno@v2
       
       - name: Run Tests
-        run: deno test -A --log-level info
+        run: deno test -allow-run
         env: 
           NO_COLOR: true
