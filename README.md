@@ -5,7 +5,7 @@ A simple logger for Deno
 
 # Notes
 
-Including a `-` or other such stuff in the filename of any file you're using GLogger with will mess up the definition path. If you have any ideas as to how to fix this issue, feel free to comment on [#5](https://github.com/grian32/glogger/issues/5).
+Including a `-` or other such stuff in the filename of any file you're using GLogger with will mess up the definition path. If you want more details on this issue, feel free to comment on [#5](https://github.com/grian32/glogger/issues/5).
 
 
 # Contributing
