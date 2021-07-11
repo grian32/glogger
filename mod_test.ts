@@ -1,4 +1,3 @@
-import { assertEquals } from "https://deno.land/std@0.97.0/testing/asserts.ts";
 import { assert } from "./deps.ts";
 
 const decoder = new TextDecoder();
@@ -14,7 +13,7 @@ Deno.test("logger.info()", async () => {
     });
     const stdout = decoder.decode(await p.output());
     p.close();
-    assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[INFO\] .+\n/gm.test(stdout));
+    assert(/\[\d{4}\/\d{2}\/\d{2} \d{1,2}:\d{2}:\d{2} (?:AM|PM)\] \[info test\] \[INFO\] .+\n/gm.test(stdout));
 })
 
 Deno.test("logger.error()", async () => {
@@ -27,7 +26,7 @@ Deno.test("logger.error()", async () => {
     });
     const stdout = decoder.decode(await p.output());
     p.close();
-    assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[ERROR\] .+\n/gm.test(stdout));
+    assert(/\[\d{4}\/\d{2}\/\d{2} \d{1,2}:\d{2}:\d{2} (?:AM|PM)\] \[error test\] \[ERROR\] .+\n/gm.test(stdout));
 })
 
 Deno.test("logger.debug()", async () => {
@@ -40,7 +39,7 @@ Deno.test("logger.debug()", async () => {
     });
     const stdout = decoder.decode(await p.output());
     p.close();
-    assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[DEBUG\] .+\n/gm.test(stdout));
+    assert(/\[\d{4}\/\d{2}\/\d{2} \d{1,2}:\d{2}:\d{2} (?:AM|PM)\] \[debug test\] \[DEBUG\] .+\n/gm.test(stdout));
 })
 
 Deno.test("logger.warn()", async () => {
@@ -53,5 +52,5 @@ Deno.test("logger.warn()", async () => {
     });
     const stdout = decoder.decode(await p.output());
     p.close();
-    assert(/\[\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2} (?:AM|PM)\] \[(?:(?:.+\.ts|.+\.js)|(?:.+\.ts@.+|.+\.js@.+))\] \[WARN\] .+\n/gm.test(stdout));
+    assert(/\[\d{4}\/\d{2}\/\d{2} \d{1,2}:\d{2}:\d{2} (?:AM|PM)\] \[warn test\] \[WARN\] .+\n/gm.test(stdout));
 })
