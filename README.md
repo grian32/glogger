@@ -1,7 +1,7 @@
 # glogger
 A simple logger for Deno
 
-![image](https://user-images.githubusercontent.com/54550982/118692250-82e68680-b812-11eb-803a-a6cf0759edb0.png)
+![image](https://user-images.githubusercontent.com/54550982/125192859-81559f80-e252-11eb-8829-31d6f9423090.png)
 
 # Contributing
 
