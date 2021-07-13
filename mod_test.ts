@@ -5,7 +5,7 @@ const decoder = new TextDecoder();
 // sets NO_COLOR so there's no color codes polluting the output.
 Deno.test("logger.info()", async () => {
     const p = Deno.run({
-        cmd: ["deno", "run", "./testfiles/info.ts"],
+        cmd: ["deno", "run", "--unstable",  "./testfiles/info.ts"],
         stdout: "piped",
         env: {
             "NO_COLOR": "",
@@ -18,7 +18,7 @@ Deno.test("logger.info()", async () => {
 
 Deno.test("logger.error()", async () => {
     const p = Deno.run({
-        cmd: ["deno", "run", "./testfiles/error.ts"],
+        cmd: ["deno", "run", "--unstable",  "./testfiles/error.ts"],
         stdout: "piped",
         env: {
             "NO_COLOR": "",
@@ -31,7 +31,7 @@ Deno.test("logger.error()", async () => {
 
 Deno.test("logger.debug()", async () => {
     const p = Deno.run({
-        cmd: ["deno", "run", "./testfiles/debug.ts"],
+        cmd: ["deno", "run", "--unstable", "./testfiles/debug.ts"],
         stdout: "piped",
         env: {
             "NO_COLOR": "",
@@ -44,7 +44,7 @@ Deno.test("logger.debug()", async () => {
 
 Deno.test("logger.warn()", async () => {
     const p = Deno.run({
-        cmd: ["deno", "run", "./testfiles/warn.ts"],
+        cmd: ["deno", "run", "--unstable", "./testfiles/warn.ts"],
         stdout: "piped",
         env: {
             "NO_COLOR": "",
