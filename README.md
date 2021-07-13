@@ -5,12 +5,25 @@ A simple logger for Deno
 
 ## Example Code
 
+### Regular Logging
 ```typescript
 import GLogger from "https://deno.land/x/glogger@2.0.0/mod.ts";
 
 let logger = new GLogger("Example");
 logger.info("Hello from Example");
 ```
+
+### File Logging
+
+All you have to do is to get file logging is to pass true to the `logToFile` parameter, and pass a location to the `logFolder` parameter, the `logFolder` paramater defaults to `./logs/`
+
+```typescript
+import GLogger from "https://deno.land/x/glogger@2.1.0/mod.ts";
+
+// this enables file logging, and puts the `.log` files in `my/path/to/log/folder`
+let logger = new GLogger("Example", true, "my/path/to/log/folder");
+logger.info("Hello from Example");
+
 
 ## Contributing
 
