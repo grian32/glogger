@@ -23,7 +23,7 @@ import GLogger from "https://deno.land/x/glogger@2.1.0/mod.ts";
 // this enables file logging, and puts the `.log` files in `my/path/to/log/folder`
 let logger = new GLogger("Example", true, "my/path/to/log/folder");
 logger.info("Hello from Example");
-
+```
 
 ## Contributing
 
