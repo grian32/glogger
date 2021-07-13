@@ -7,7 +7,7 @@ A simple logger for Deno
 
 ### Regular Logging
 ```typescript
-import GLogger from "https://deno.land/x/glogger@2.0.0/mod.ts";
+import GLogger from "https://deno.land/x/glogger@2.1.0/mod.ts";
 
 let logger = new GLogger("Example");
 logger.info("Hello from Example");
