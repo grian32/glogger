@@ -11,7 +11,7 @@ export default class GLogger {
         this._location = location;
         this._logToFile = logToFile;
         this._logFolder = logFolder;
-        this._date = format(new Date(), "yyyy|MM|dd h:mm:ss a");
+        this._date = format(new Date(), "yyyy|MM|dd");
     }
 
     info(message: string): void {
