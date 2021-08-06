@@ -17,4 +17,4 @@ export {
 
 export {
     ensureDirSync,
-} from "https://deno.land/std@0.103.0/fs/mod.ts"
+} from "https://deno.land/std@0.103.0/fs/mod.ts";
