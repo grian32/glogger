@@ -15,7 +15,7 @@ logger.info("Hello from Example");
 
 ### File Logging
 
-All you have to do is to get file logging is to pass true to the `logToFile` parameter, and pass a location to the `logFolder` parameter, the `logFolder` paramater defaults to `./logs/`
+To enable file logging you must pass `true` to the `logToFile` parameter, and pass a location to the `logFolder` parameter, the `logFolder` paramater defaults to `./logs/`
 
 ```typescript
 import GLogger from "https://deno.land/x/glogger@2.1.0/mod.ts";
